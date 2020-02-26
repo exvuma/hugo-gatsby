@@ -1,26 +1,12 @@
 {
-  "version": "0.0.5",
-  "description": "Cloudflare Workers docs workers",
+  "private": true,
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
   "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "format": "prettier --write '**/*.js'",
-    "test": "ava test/index.js --verbose",
-    "test:watch": "npm run test -w"
-  },
+  "author": "Cloudflare",
   "license": "MIT",
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "0.0.5"
-  },
-  "ava": {
-    "require": [
-      "esm"
-    ]
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^1.0.1",
-    "ava": "^1.4.1",
-    "service-worker-mock": "^2.0.3",
-    "prettier": "^1.18.2"
+    "@cloudflare/kv-asset-handler": "^0.0.9"
   }
 }
