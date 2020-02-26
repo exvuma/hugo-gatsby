@@ -43,21 +43,6 @@ const Sidebar = ({ pathToServe = '/' }) => {
     `
   ).allMdx.edges
 
-  const templateGalleryPage = {
-    fields: {
-      pathToServe: '/workers/templates',
-      parent: '/',
-      filePath: 'src/content/workers/templates',
-    },
-    frontmatter: {
-      showNew: false,
-      weight: 1,
-      alwaysopen: false,
-      hidden: false,
-      title: 'Template Gallery',
-    },
-  }
-
   return (
     <>
       <a id="sidebar-toggle" onClick={clickHandler}>
@@ -93,7 +78,6 @@ const Sidebar = ({ pathToServe = '/' }) => {
                 return matchedPaths.length < 1
               })
               .map(edge => edge.node)
-              .concat(templateGalleryPage)
               .sort(sortByWeight)
               .map((node: mdx) => {
                 const { fields, frontmatter } = node
